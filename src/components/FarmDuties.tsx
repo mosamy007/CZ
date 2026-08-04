@@ -60,9 +60,9 @@ export default function FarmDuties() {
 
     // Simulated short delay for premium UX feel
     setTimeout(() => {
-      if (gtdList.includes(cleanAddress)) {
+      if (gtdList.indexOf(cleanAddress) !== -1) {
         setCheckResult("gtd");
-      } else if (fcfsList.includes(cleanAddress)) {
+      } else if (fcfsList.indexOf(cleanAddress) !== -1) {
         setCheckResult("fcfs");
       } else {
         setCheckResult("not-found");
