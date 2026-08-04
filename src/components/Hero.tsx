@@ -50,7 +50,7 @@ export default function Hero() {
                 "4px 4px 0px #8B5A2B, -2px -2px 0px #8B5A2B, 2px -2px 0px #8B5A2B, -2px 2px 0px #8B5A2B, 2px 2px 0px #8B5A2B",
             }}
           >
-            Search Your Place In Da Herd
+            Check Your Place In Da Herd
           </h1>
 
           <div className="flex justify-center">
