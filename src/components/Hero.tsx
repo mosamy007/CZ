@@ -44,20 +44,14 @@ export default function Hero() {
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-grow flex flex-col justify-center items-center text-center pt-8 pb-52 sm:pb-60 lg:pb-32">
         <div className="max-w-2xl px-4 py-8 rounded-3xl bg-paper-beige/90 border-4 border-wood-brown shadow-2xl relative">
           <h1
-            className="font-luckiest-guy text-4xl sm:text-6xl md:text-7xl text-[#FF9900] tracking-wide mb-4"
+            className="font-luckiest-guy text-3xl sm:text-5xl md:text-6xl text-[#FF9900] tracking-wide mb-8"
             style={{
               textShadow:
                 "4px 4px 0px #8B5A2B, -2px -2px 0px #8B5A2B, 2px -2px 0px #8B5A2B, -2px 2px 0px #8B5A2B, 2px 2px 0px #8B5A2B",
             }}
           >
-            GET TO DA HERD
+            Search Your Place In Da Herd
           </h1>
-          <p className="font-luckiest-guy text-xl sm:text-2xl text-wood-brown mb-2 tracking-wider">
-            GTD Applications are now open.
-          </p>
-          <p className="font-outfit font-bold text-dark-text text-base sm:text-lg mb-8 max-w-md mx-auto">
-            Complete the farm duties to secure your spot in da herd.
-          </p>
 
           <div className="flex justify-center">
             <WoodenButton onClick={handleJoin}>
