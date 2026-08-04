@@ -29,9 +29,6 @@ export const metadata: Metadata = {
     ]
   },
   manifest: "/site.webmanifest",
-  other: {
-    google: "notranslate",
-  },
   openGraph: {
     title: "Cowz | Join The Secret Herd",
     description: "FCFS Whitelist Applications are now open. Complete the farm duties to apply and join the secret herd.",
@@ -49,7 +46,6 @@ export default function RootLayout({
       lang="en"
       className={`${luckiestGuy.variable} ${outfit.variable} h-full antialiased`}
       suppressHydrationWarning
-      translate="no"
     >
       <body className="min-h-full flex flex-col bg-sky-blue overflow-x-hidden text-dark-text">
         <Navbar />

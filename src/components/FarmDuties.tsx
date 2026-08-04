@@ -83,10 +83,10 @@ export default function FarmDuties() {
             className="font-luckiest-guy text-4xl sm:text-6xl text-paper-beige tracking-wider"
             style={{ textShadow: "4px 4px 0px #8B5A2B" }}
           >
-            WHITELIST CHECKER
+            <span>WHITELIST CHECKER</span>
           </h2>
           <p className="font-outfit font-bold text-dark-text text-lg max-w-xl mx-auto mt-2">
-            Paste your Ethereum wallet address to check if you are whitelisted for FCFS or GTD.
+            <span>Paste your Ethereum wallet address to check if you are whitelisted for FCFS or GTD.</span>
           </p>
         </div>
 
@@ -112,7 +112,7 @@ export default function FarmDuties() {
                     htmlFor="walletAddress"
                     className="block font-luckiest-guy text-lg sm:text-xl text-wood-brown mb-3 tracking-wide"
                   >
-                    Enter Wallet Address
+                    <span>Enter Wallet Address</span>
                   </label>
                   <div className="relative max-w-lg mx-auto">
                     <input
@@ -131,7 +131,8 @@ export default function FarmDuties() {
                   </div>
                   {errorMsg && (
                     <p className="text-red-600 text-xs font-bold mt-2 flex items-center justify-center gap-1">
-                      <AlertCircle className="w-3.5 h-3.5" /> {errorMsg}
+                      <AlertCircle className="w-3.5 h-3.5 flex-shrink-0" />
+                      <span>{errorMsg}</span>
                     </p>
                   )}
                 </div>
@@ -143,15 +144,18 @@ export default function FarmDuties() {
                   >
                     {isChecking ? (
                       <span className="flex items-center gap-2">
-                        <Loader2 className="w-5 h-5 animate-spin" /> Checking...
+                        <Loader2 className="w-5 h-5 animate-spin flex-shrink-0" />
+                        <span>Checking...</span>
                       </span>
                     ) : isLoadingLists ? (
                       <span className="flex items-center gap-2">
-                        <Loader2 className="w-5 h-5 animate-spin" /> Loading Registry...
+                        <Loader2 className="w-5 h-5 animate-spin flex-shrink-0" />
+                        <span>Loading Registry...</span>
                       </span>
                     ) : (
                       <span className="flex items-center gap-2">
-                        <Search className="w-5 h-5" /> Check Wallet
+                        <Search className="w-5 h-5 flex-shrink-0" />
+                        <span>Check Wallet</span>
                       </span>
                     )}
                   </WoodenButton>
@@ -165,21 +169,25 @@ export default function FarmDuties() {
                 {checkResult === "gtd" && (
                   <div className="p-6 rounded-2xl bg-button-green border-4 border-wood-brown shadow-xl text-paper-beige text-center">
                     <div className="w-12 h-12 bg-paper-beige rounded-full flex items-center justify-center mx-auto mb-3 border-2 border-wood-brown">
-                      <Check className="w-7 h-7 text-button-green stroke-[3]" />
+                      <Check className="w-7 h-7 text-button-green stroke-[3] flex-shrink-0" />
                     </div>
                     <h4 className="font-luckiest-guy text-2xl tracking-wide mb-2">
-                      CONGRATS! YOU ARE IN DA HERD!
+                      <span>CONGRATS! YOU ARE IN DA HERD!</span>
                     </h4>
-                    <p className="font-outfit font-bold text-sm sm:text-base max-w-md mx-auto mb-4 text-paper-beige/90">
-                      Your wallet <span className="underline break-all block mt-1 font-mono text-xs">{checkedAddress}</span> is whitelisted for the <strong className="text-amber-300">GTD (Guaranteed Mint)</strong> spot!
-                    </p>
+                    <div className="font-outfit font-bold text-sm sm:text-base max-w-md mx-auto mb-4 text-paper-beige/90">
+                      <span>Your wallet </span>
+                      <span className="underline break-all block mt-1 font-mono text-xs notranslate" translate="no">{checkedAddress}</span>
+                      <span> is whitelisted for the </span>
+                      <strong className="text-amber-300"><span>GTD (Guaranteed Mint)</span></strong>
+                      <span> spot!</span>
+                    </div>
                     <Link
                       href="https://opensea.io/collection/cowz1/overview"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block px-6 py-2.5 bg-paper-beige text-wood-brown font-luckiest-guy rounded-xl border-4 border-wood-brown hover:bg-[#eae0c5] active:scale-95 transition-all text-sm tracking-wider"
                     >
-                      View on OpenSea
+                      <span>View on OpenSea</span>
                     </Link>
                   </div>
                 )}
@@ -187,21 +195,25 @@ export default function FarmDuties() {
                 {checkResult === "fcfs" && (
                   <div className="p-6 rounded-2xl bg-[#FF9900] border-4 border-wood-brown shadow-xl text-paper-beige text-center">
                     <div className="w-12 h-12 bg-paper-beige rounded-full flex items-center justify-center mx-auto mb-3 border-2 border-wood-brown">
-                      <Check className="w-7 h-7 text-[#FF9900] stroke-[3]" />
+                      <Check className="w-7 h-7 text-[#FF9900] stroke-[3] flex-shrink-0" />
                     </div>
                     <h4 className="font-luckiest-guy text-2xl tracking-wide mb-2">
-                      CONGRATS! YOU ARE IN DA HERD!
+                      <span>CONGRATS! YOU ARE IN DA HERD!</span>
                     </h4>
-                    <p className="font-outfit font-bold text-sm sm:text-base max-w-md mx-auto mb-4 text-paper-beige/90">
-                      Your wallet <span className="underline break-all block mt-1 font-mono text-xs">{checkedAddress}</span> is whitelisted for the <strong className="text-yellow-200">FCFS (First-Come, First-Served)</strong> spot!
-                    </p>
+                    <div className="font-outfit font-bold text-sm sm:text-base max-w-md mx-auto mb-4 text-paper-beige/90">
+                      <span>Your wallet </span>
+                      <span className="underline break-all block mt-1 font-mono text-xs notranslate" translate="no">{checkedAddress}</span>
+                      <span> is whitelisted for the </span>
+                      <strong className="text-yellow-200"><span>FCFS (First-Come, First-Served)</span></strong>
+                      <span> spot!</span>
+                    </div>
                     <Link
                       href="https://opensea.io/collection/cowz1/overview"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block px-6 py-2.5 bg-paper-beige text-wood-brown font-luckiest-guy rounded-xl border-4 border-wood-brown hover:bg-[#eae0c5] active:scale-95 transition-all text-sm tracking-wider"
                     >
-                      View on OpenSea
+                      <span>View on OpenSea</span>
                     </Link>
                   </div>
                 )}
@@ -209,21 +221,23 @@ export default function FarmDuties() {
                 {checkResult === "not-found" && (
                   <div className="p-6 rounded-2xl bg-[#a1403b] border-4 border-wood-brown shadow-xl text-paper-beige text-center">
                     <div className="w-12 h-12 bg-paper-beige rounded-full flex items-center justify-center mx-auto mb-3 border-2 border-wood-brown">
-                      <AlertCircle className="w-7 h-7 text-[#a1403b] stroke-[3]" />
+                      <AlertCircle className="w-7 h-7 text-[#a1403b] stroke-[3] flex-shrink-0" />
                     </div>
                     <h4 className="font-luckiest-guy text-2xl tracking-wide mb-2">
-                      NOT FOUND IN DA LISTS!
+                      <span>NOT FOUND IN DA LISTS!</span>
                     </h4>
-                    <p className="font-outfit font-bold text-sm sm:text-base max-w-md mx-auto mb-4 text-paper-beige/90">
-                      Wallet <span className="underline break-all block mt-1 font-mono text-xs">{checkedAddress}</span> was not found in the FCFS or GTD lists.
-                    </p>
+                    <div className="font-outfit font-bold text-sm sm:text-base max-w-md mx-auto mb-4 text-paper-beige/90">
+                      <span>Wallet </span>
+                      <span className="underline break-all block mt-1 font-mono text-xs notranslate" translate="no">{checkedAddress}</span>
+                      <span> was not found in the FCFS or GTD lists.</span>
+                    </div>
                     <Link
                       href="https://opensea.io/collection/cowz1/overview"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block px-6 py-2.5 bg-paper-beige text-wood-brown font-luckiest-guy rounded-xl border-4 border-wood-brown hover:bg-[#eae0c5] active:scale-95 transition-all text-sm tracking-wider"
                     >
-                      Visit OpenSea
+                      <span>Visit OpenSea</span>
                     </Link>
                   </div>
                 )}
