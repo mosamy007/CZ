@@ -8,7 +8,7 @@ export default function Hero() {
   const router = useRouter();
 
   const handleJoin = () => {
-    router.push("/duties");
+    router.push("/check");
   };
 
   return (
@@ -61,7 +61,7 @@ export default function Hero() {
 
           <div className="flex justify-center">
             <WoodenButton onClick={handleJoin}>
-              Secure a spot
+              Check
             </WoodenButton>
           </div>
         </div>

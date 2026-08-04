@@ -35,6 +35,12 @@ export default function Footer() {
               Home
             </Link>
             <Link
+              href="/check"
+              className="font-luckiest-guy tracking-wider hover:text-sky-blue transition-colors text-sm"
+            >
+              Check
+            </Link>
+            <Link
               href="/faq"
               className="font-luckiest-guy tracking-wider hover:text-sky-blue transition-colors text-sm"
             >
@@ -51,6 +57,14 @@ export default function Footer() {
               className="px-4 py-1 bg-dark-text text-paper-beige font-luckiest-guy rounded-md border-2 border-paper-beige hover:bg-paper-beige hover:text-dark-text hover:scale-105 active:scale-95 transition-all duration-200 text-xs"
             >
               X
+            </Link>
+            <Link
+              href="https://opensea.io/collection/cowz1/overview"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-1 bg-[#2081E2] text-white font-luckiest-guy rounded-md border-2 border-paper-beige hover:bg-paper-beige hover:text-dark-text hover:scale-105 active:scale-95 transition-all duration-200 text-xs"
+            >
+              OpenSea
             </Link>
           </div>
         </div>

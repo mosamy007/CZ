@@ -26,7 +26,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Duties", href: "/duties" },
+    { name: "Check", href: "/check" },
     { name: "FAQ", href: "/faq" },
   ];
 
@@ -82,6 +82,14 @@ export default function Navbar() {
               >
                 X
               </Link>
+              <Link
+                href="https://opensea.io/collection/cowz1/overview"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-1 bg-[#2081E2] text-white font-luckiest-guy rounded-md border-2 border-wood-brown hover:bg-[#1868b7] hover:text-white hover:scale-105 active:scale-95 transition-all duration-200"
+              >
+                OpenSea
+              </Link>
             </div>
           </div>
 
@@ -132,6 +140,15 @@ export default function Navbar() {
                 className="px-8 py-2 bg-dark-text text-paper-beige font-luckiest-guy rounded-md border-2 border-wood-brown text-center w-2/3 hover:bg-wood-brown hover:text-paper-beige transition-all"
               >
                 X
+              </Link>
+              <Link
+                href="https://opensea.io/collection/cowz1/overview"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="px-8 py-2 bg-[#2081E2] text-white font-luckiest-guy rounded-md border-2 border-wood-brown text-center w-2/3 hover:bg-[#1868b7] transition-all"
+              >
+                OpenSea
               </Link>
             </div>
           </div>
