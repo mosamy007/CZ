@@ -215,7 +215,7 @@ export default function FarmDuties() {
                       NOT FOUND IN DA LISTS!
                     </h4>
                     <p className="font-outfit font-bold text-sm sm:text-base max-w-md mx-auto mb-4 text-paper-beige/90">
-                      Wallet <span className="underline break-all block mt-1 font-mono text-xs">{checkedAddress}</span> was not found in the FCFS or GTD lists. Keep an eye on our X for future spots!
+                      Wallet <span className="underline break-all block mt-1 font-mono text-xs">{checkedAddress}</span> was not found in the FCFS or GTD lists.
                     </p>
                     <Link
                       href="https://opensea.io/collection/cowz1/overview"
